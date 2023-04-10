@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        padding: 0;
+        margin: 7px;
+    }
+    button:hover{
+        background-color: magenta;
+    }
+    button{
+        background-color: black;
+    }
+
+</style>
+<script>
+        function vali()
+        {
+          let  user=document.forms["fom"]["fname"].value;
+          let  use=document.forms["fom"]["pass"].value;
+          let  us=document.forms["fom"]["text"].value;
+          let  u=document.forms["fom"]["date"].value;
+          let  s=document.forms["fom"]["submit"].value;
+        if(user=="")
+        {
+            alert("enter the value of name and it first letter should be capital");
+        }
+        if(use=="")
+        {
+            alert("enter the value and password should be 15 letters");
+        }
+        if(us=="")
+        {
+            alert("enter the values of textbox");
+        }
+        if(u=="")
+        {
+            alert("enter values");
+        }
+        }
+    </script>
+</head>
+<body>
+    <form name="fom" onsubmit="vali()" >
+<table>
+    <tr>
+        <th>
+        <label>Username: 
+            <input type="textbox" name="fname" pattern="A/Z">
+        </label>
+    </th>
+    </tr>
+    <tr>
+        <th>
+        <label>Password:
+            <input type="password" name="pass" >
+        </label>
+    </th>
+    </tr>
+    <tr>    
+        <th>    
+        <label>
+        
+            <textarea name="text">Textbox</textarea>
+        </label>
+    </th>
+    </tr>
+    <tr>
+        <th>
+        <label>
+Age:
+<input type="date" name="date" >
+        </label>
+    </th>
+    </tr>
+    <tr>
+        <th>
+            <button> <input type="submit" name="submit" ></button>
+    </th>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
